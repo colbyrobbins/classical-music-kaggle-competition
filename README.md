@@ -54,12 +54,3 @@ python scripts/make_submission.py            # submissions/submission.csv  (--no
 ```
 
 The notebook finds the repo root automatically, so it runs from either the root or `notebooks/`.
-
-## Results
-
-| Submission | CV AUROC (5x3, seed 21) | Public AUROC | Private AUROC |
-|---|---|---|---|
-| `submission.csv` (final: LR + RF + XGBoost + HistGradientBoosting, top-20 features) | 0.9876 | 0.97111 | _fill in_ |
-| `submission_no_id.csv` (fallback, no account-ID feature) | 0.9772 | not scored for this exact model | n/a |
-
-CV is optimistic: features and hyperparameters were selected on the same training rows (with different CV seeds), and the account-ID feature carries much of the signal (dropping it costs about 0.013 AUROC in CV). `results/final_config.json` holds the exact features and hyperparameters; `python scripts/make_submission.py` rebuilds the submission from it.
