@@ -1,0 +1,62 @@
+{
+  "features": [
+    "sub_seasons_since_last",
+    "acct_id_rank",
+    "sub_subscribed_2013",
+    "don_avg_gift_log",
+    "don_years_since_first",
+    "dist_min",
+    "tk_avg_price_level",
+    "don_n",
+    "sub_n_seasons",
+    "sub_years_since_first",
+    "don_lifetime_log",
+    "sub_current_streak",
+    "sub_frac_last3",
+    "dist_peninsula",
+    "taste_era_baroque",
+    "zip_in_ca",
+    "tk13_n_tickets",
+    "sub_tier_last",
+    "dist_berkeley",
+    "dist_walnutcreek"
+  ],
+  "members": {
+    "logreg": {
+      "imbalance": "none",
+      "params": {
+        "C": 3.0
+      }
+    },
+    "rf": {
+      "imbalance": "weight",
+      "params": {
+        "n_estimators": 500,
+        "min_samples_leaf": 8,
+        "max_features": "sqrt"
+      }
+    },
+    "xgb": {
+      "imbalance": "none",
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "min_child_weight": 1.0,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0
+      }
+    },
+    "hgb": {
+      "imbalance": "weight",
+      "params": {
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "max_iter": 300,
+        "min_samples_leaf": 20,
+        "l2_regularization": 1.0
+      }
+    }
+  }
+}

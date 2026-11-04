@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project: competition data is course-provided, keep it out of git
+data/raw/*
+!data/raw/.gitkeep

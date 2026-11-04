@@ -1,0 +1,7 @@
+numpy
+pandas
+scipy
+scikit-learn
+imbalanced-learn   # SMOTE experiments
+xgboost            # XGBoost baseline
+jupyterlab
